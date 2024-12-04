@@ -42,4 +42,8 @@ macOS iOS, Android 모두 확인
 
 설치 시 변경되는 환경 변수들에 대해서 `source ~/.zprofile`(`zshrc`) 실행
 
+### 경험한 문제
+
+1. `yarn ios`대신 xcode에서 실행 시 Xcode > `Ch2ProjectSetup.xcodeproj`으로 Open 시 `Library 'CocoaAsyncSocket' not found` 오류사 발생. `Ch2ProjectSetup.xcworkspace`으로 실행해야 함.
+
 ## Ch 3. Expo를 이용한 기초 웹뷰 개발
