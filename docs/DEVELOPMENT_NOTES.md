@@ -46,4 +46,13 @@ macOS iOS, Android 모두 확인
 
 1. `yarn ios`대신 xcode에서 실행 시 Xcode > `Ch2ProjectSetup.xcodeproj`으로 Open 시 `Library 'CocoaAsyncSocket' not found` 오류사 발생. `Ch2ProjectSetup.xcworkspace`으로 실행해야 함.
 
+2. Webview uri 중 일부 uri가 `NSURLErrorDomain` 관련 이슈가 발생했는데, 회사에서 테스트 시 ssl 문제로 확인 
+
+### 웹뷰로 웹 사이트 로드하기
+
+[React Native WebView Getting Started Guide](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Getting-Started.md)를 보면서 진행.
+
+가이드에는 ios에서 `pod install`을 하지만 `bundle exec pod install`을 실행.
+(사유: 시스템에 설치된 다른 버전의 CocoaPods와의 충돌을 방지, Gemfile.lock에 명시된 버전을 정확히 사용하여 일관성 유지)
+
 ## Ch 3. Expo를 이용한 기초 웹뷰 개발
