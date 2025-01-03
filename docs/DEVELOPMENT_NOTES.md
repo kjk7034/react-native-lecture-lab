@@ -63,3 +63,4 @@ macOS iOS, Android 모두 확인
 
 - `yarn create expo --template expo-template-blank-typescript@50`으로 테스트를 했으나, `Error: Cannot find module 'math-intrinsincs/max'` 오류가 발생
   - 가이드 문서처럼 최신 버전으로 `yarn create expo-app --template blank-typescript` 설치(blank-typescript@50도 했지만 동일한 오류가 발생.)
+- `yarn expo install react-native-webview`으로 설치가 진행되지 않아서 `npx expo install react-native-webview`으로 진행함.
