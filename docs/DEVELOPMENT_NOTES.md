@@ -64,3 +64,14 @@ macOS iOS, Android 모두 확인
 - `yarn create expo --template expo-template-blank-typescript@50`으로 테스트를 했으나, `Error: Cannot find module 'math-intrinsincs/max'` 오류가 발생
   - 가이드 문서처럼 최신 버전으로 `yarn create expo-app --template blank-typescript` 설치(blank-typescript@50도 했지만 동일한 오류가 발생.)
 - `yarn expo install react-native-webview`으로 설치가 진행되지 않아서 `npx expo install react-native-webview`으로 진행함.
+
+## Part 2. 웹뷰 띄우기 학습. 네이버 앱 클론 코딩 프로젝트
+
+- npx react-native@0.73.8 init NaverAppClone --version 0.73.8
+- ios에서 `No bundle URL present. Make sure you're running a packager server or have included a .jsbundle file in your application bundle.` 이슈가 발생함.
+   - [[React-Native Error Log] No bundle URL present 이슈](https://velog.io/@haerim95/React-Native-Error-Log-No-bundle-URL-present-%EC%9D%B4%EC%8A%88) 링크의 내용과 하단 유튜브 영상을 참고하여 해결.
+- Navigation 관련해서는 [React Navigation](https://reactnavigation.org/docs/getting-started) 설치.
+   - `npx pod-install ios` 대신 `bundle exec pod install`으로 설치
+   - Android 설치 시 `sdk/ndk/25.1.8937393 did not have a source.properties file` 오류가 발생
+      - Android Studio > Tools > SDK Manager > SDK Tools > NDK (Side by side)에서 **해당 버전**을 찾아서 설치.
+   - `FAILURE: Build failed with an exception. * What went wrong: Execution failed for task ':react-native-safe-area-context:compileDebugKotlin'. > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction > Compilation error. See log for more details` 위 이슈는 `react-native-safe-area-context`가 ^5.0.0으로 설치되어 발생한 이슈로 ^4.0.0으로 수정하여 해결. (5버전은 react-native 0.74부터 지원: 프로젝트는 0.73.8)
