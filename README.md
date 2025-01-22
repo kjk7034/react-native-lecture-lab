@@ -11,3 +11,7 @@ React Native로 개발을 한지 오래되었고 Fastlane도 테스트하고 싶
 설치 및 개발하는 과정에서 발생한 내용들에 대한 메모
 
 [DEVELOPMENT_NOTES](./docs/DEVELOPMENT_NOTES.md)
+
+## 강의 자료
+
+[github](https://github.com/ghsdh3409/fastcampus-rn-webview)
