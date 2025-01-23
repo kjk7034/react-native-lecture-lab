@@ -160,3 +160,51 @@ macOS iOS, Android 모두 확인
 
 - 앱과 웹이 서로 통신하여 반복 기능 구현하기
 - 웹뷰 디버깅 하기
+
+## Part 4. 앱 리소스 사용 학습 - 챗GPT API 활용 클로바ST 녹음요약 앱 프로젝트
+
+### Part 4. 학습 리뷰
+
+#### 웹-녹음 기능 구현
+
+- Nextjs를 이용한 웹 프로젝트 초기화
+- Tailwind를 이용한 CSS 작업
+- MediaRecorder API를 이용한 웹 녹음 기능 구현
+
+#### 웹 – 스크립트 추출 및 요약
+
+- OpenAI의 Whisper API를 이용하여 Speech To Text 구현
+- OpenAI의 ChatGPT API를 이용하여 텍스트 요약 기능 구현
+
+#### 앱 – 웹 사이트 로드하기
+
+- 웹뷰를 이용하여 웹 사이트 로드
+- 디바이스에서 테스트 하기 위해서 터널링 서비스이용 (ngrok)
+
+#### 앱 – 녹음 기능 구현
+
+- 웹과 앱 동작 분기하여 웹 프로젝트 구현
+  - window.ReactNativeWebView 존재 여부 확인
+- 웹에서 앱으로 녹음 요청
+- 앱의 녹음 API를 이용하여 오디오 녹음
+  - react-native-audio-recorder-player / expo-av
+  - react-native-permissions
+  - react-native-fs / expo-file-system
+- 앱의 녹음 파일을 웹으로 전달
+  - Base64 인코딩
+  - webview.postMessage
+
+#### 앱 – 사진 첨부 기능 구현
+
+- 웹에서 앱으로 사진 촬영 요청
+- 앱의 카메라 API를 이용하여 사진 촬영
+  - react-native-vision-camera / expo-camera
+  - react-native-fs / expo-file-system
+- 앱의 사진 파일을 웹으로 전달
+  - Base64 인코딩
+  - webview.postMessage
+
+#### 앱 – 데이터 저장 기능 구현
+
+- 웹의 데이터를 앱 스토리지에 영구 저장
+  - react-native-async-storage
